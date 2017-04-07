@@ -1,0 +1,47 @@
+body {
+    background-color: $primary-color;
+}
+
+body,
+html {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    color: $white-smoke;
+}
+
+.generator-button {
+    transition: all ease-in-out 0.3s;
+    background-color: $primary-color;
+    cursor: pointer;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    color: $white-smoke;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.generator-button:hover {
+    background-color: #3a3a3a;
+}
+
+input[type='radio'] {
+    display: block;
+    float: left;
+    clear: none;
+    margin-right: 15px;
+}
+
+input[type='radio'],
+input + label {
+    cursor: pointer;
+}
+
+input + label {
+    float: left;
+    clear: none;
+    display: block;
+    padding-right: 15px;
+}
