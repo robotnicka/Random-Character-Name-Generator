@@ -9,22 +9,35 @@ html {
     color: $white-smoke;
 }
 
+.container {
+    width: 80%;
+    padding: 4%;
+    max-width: 1680px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+fieldset {
+    border-width: 1px;
+}
+
 .generator-button {
     transition: all ease-in-out 0.3s;
-    background-color: $primary-color;
+    background-color: $gold-leaf;
     cursor: pointer;
     padding-top: 7px;
     padding-right: 7px;
     padding-bottom: 7px;
     padding-left: 7px;
-    color: $white-smoke;
+    color: $primary-color;
     border: 0;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .generator-button:hover {
-    background-color: #3a3a3a;
+    background-color: $silver-chalice;
+    color: $charcoal;
 }
 
 input[type='radio'] {
