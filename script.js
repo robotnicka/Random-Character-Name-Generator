@@ -1,16 +1,14 @@
-window.onload = function() {
-    generateCharacter();
-};
+/*global $*/
 
-function generateCharacter() {
-    document.getElementById('generator').onclick = function() {
+$(document).ready(function() {
+
+    $('#generator').click(function(event) {
+        event.preventDefault();
+        
         $('#names-container').load('random.php', function(responseTxt, statusTxt, xhr) {
             if (statusTxt == 'error') {
                 console.error("Error: " + xhr.status + " " + xhr.statusText);
             };
         });
-
-    }
-    
-    $('.generator').click();
-};
+    });
+});

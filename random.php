@@ -1,32 +1,16 @@
 <?php
     include 'config.php';
+
+    // Connect
+    $connect = mysqli_connect($servername, $username, $password, $dbname) or die("Some error occurred during connection " . mysqli_error($connect));  
     
-    // Create connection
-    $connection = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
-    } 
-    // SELECT * FROM firstNames, lastNames
-    $sql = "SELECT firstName, lastName FROM firstNames, lastNames ORDER BY RAND() LIMIT 1";
+    // Get result
+    $result = mysqli_query($connect, "SELECT f.firstname, l.lastname FROM firstNames f, lastNames l ORDER BY rand() limit 1");
     
-    $result = $connection->query($sql);
-    
-    $array = mysqli_fetch_array($result);
+    $names = mysqli_fetch_assoc($result);
     
     mysqli_free_result($result);
+    mysqli_close($connect);
     
-    $connection->close();
-    
-    print ('here');
-    // echo $story;
-
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "Name: " . $row["firstName"] . " " . $row["lastName"] . "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
+    echo $names['firstname'] . ' ' . $names['lastname'];
 ?>
