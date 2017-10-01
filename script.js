@@ -4,6 +4,13 @@ window.onload = function() {
 
 function generateCharacter() {
     document.getElementById('generator').onclick = function() {
-        alert('hey');
+        $('#names-container').load('random.php', function(responseTxt, statusTxt, xhr) {
+            if (statusTxt == 'error') {
+                console.error("Error: " + xhr.status + " " + xhr.statusText);
+            };
+        });
+
     }
+    
+    $('.generator').click();
 };
