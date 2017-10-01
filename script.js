@@ -9,6 +9,8 @@ $(document).ready(function() {
             if (statusTxt == 'error') {
                 console.error("Error: " + xhr.status + " " + xhr.statusText);
             };
+            
+            $('.name-header').text("Your character's name is:");
         });
     });
 });

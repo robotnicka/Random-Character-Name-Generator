@@ -22,7 +22,8 @@
                 <button id="generator" class="generator-button">Click to generate</button>
             </form>
             
-            <p id="names-container"></p>
+            <h3 class="name-header"></h3>
+            <h2 id="names-container"></h2>
             
         </div>
     </body>
