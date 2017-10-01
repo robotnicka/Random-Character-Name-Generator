@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="script.js"></script>
+        <script src="script.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
